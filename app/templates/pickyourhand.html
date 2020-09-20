@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+    {% block content %}
+    <main>
+        <h1>And the winner is... :</h1>>
+            <section>
+                {% for result in results %}
+                        Result: {{ results }}
+                    {% endfor %}
+            </section>
+    </main>
     <h2>Player One</h2>
     <form action="/gameplay" method='post'>
     <label for='player1'>What is your name?</label>
-    <input type="text" id='player1'>
-    <label for='chioces1'>Chose your hand:</label>
-    <select name='chioces1' id='chioces1'>
+    <input type="text" name='player1' id='player1'>
+    <label for='choices1'>Chose your hand:</label>
+    <select name='choices1' id='choices1'>
         <option value="rock">rock</option>
         <option value="paper">paper</option>
         <option value="scissors">scissors</option>
     </select>
     <h2>Player Two</h2>
     <label for='player2'>What is your name?</label>
-    <input type="text" id='player2'>
-    <label for='chioces2'>Chose your hand:</label>
-    <select name='chioces2' id='chioces2'>
+    <input type="text" name='player2'id='player2'>
+    <label for='choices2'>Chose your hand:</label>
+    <select name='choices2' id='choices2'>
         <option value="rock">rock</option>
         <option value="paper">paper</option>
         <option value="scissors">scissors</option>
@@ -28,5 +30,4 @@
     <br><br>
     <input type="submit" value="Submit" id="submit"> 
         </form>
-</body>
-</html>
+    {% endblock %}
