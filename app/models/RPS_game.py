@@ -23,3 +23,5 @@ def gameplay(player1, player2):
     elif player2.choice == "scissors" and player1.choice == "rock":
         results.append(player1.name + " wins!")
 
+
+
