@@ -14,7 +14,6 @@ def pick_your_hand():
 
 @app.route('/gameplay', methods=['POST'])
 def play_the_game():
-    print(request.form.to_dict())
     player_1_name = request.form["player1"]
     player_1_choice = request.form["choices1"]
     player_2_name = request.form["player2"]
